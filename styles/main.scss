@@ -1,0 +1,176 @@
+@import 'base/variables';
+@import 'base/mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: $bg_color;
+    color: $text_color;
+    font-size: 14px;
+}
+.block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    &_signup {
+        @include box(450px, 470px);
+    }
+    &_signin {
+        @include box(450px, 310px);
+    }
+    &__h2 {
+        text-align: center;
+        font-weight: normal;
+        font-size: 30px;
+    }
+    &__form {
+        @include box(100%, 360px);
+        margin-top: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__label {
+        position: relative;
+    }
+    &__placeholder {
+        color: $placeholder_color;
+        position: absolute;
+        top: 16px;
+        left: 11px;
+        transition: all $time;
+        &_write {
+            font-size: 13px;
+            top: 7px;
+        }
+    }
+    &__input {
+        @include box(100%, 50px);
+        border: 1px solid $border_color;
+        border-radius: 5px;
+        padding-left: 10px;
+        outline: none;
+        transition: all $time;
+        &_write {
+            padding-top: 20px;
+        }
+        &:focus {
+            border-color: $focus_blue;
+            box-shadow: 0 0 0 3px $focus_blue;
+        }
+    }
+    &__modal {
+        background: $red_color;
+        color: $bg_color;
+        font-size: 13px;
+        padding: 5px 6px;
+        border-radius: 4px;
+        position: absolute;
+        top: 51px;
+        left: 0;
+    }
+    &__button {
+        @include box(100%, 40px);
+        border: none;
+        border-radius: 4px;
+        outline: none;
+        font-size: 16px;
+        color: $bg_color;
+        cursor: pointer;
+        &_blue {
+            background-color: $blue_color;
+            &:focus {
+                box-shadow: 0 0 0 3px $focus_blue;
+            }
+        }
+        &_green {
+            background-color: $green_color;
+            &:focus {
+                box-shadow: 0 0 0 3px $focus_green;
+            }
+        }
+    }
+    &__link {
+        width: 81px;
+        color: $blue_color;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &_profile {
+        @include box(400px, 400px);
+        background: $bg_color2;
+        padding: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__user {
+        @include box(100%, 70%);
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    &__photo {
+        @include box(100px, 100px);
+        border-radius: 50%;
+    }
+    &__h3 {
+        font-size: 24px;
+        margin: 10px;
+    }
+    &__p {
+        color: $text_color2;
+    }
+    &__hr {
+        width: 60px;
+    }
+}
+
+.invalid{
+    &::after {
+        content: '\2716';
+        color: $red_color;
+        position: absolute;
+        top: 14px;
+        right: 10px;
+    }
+    input {
+        border-color: $red_color;
+        &:focus {
+            box-shadow: 0 0 0 3px $focus_red;
+        }
+    }
+}
+.valid{
+    &::after {
+        content: '\2714';
+        color: $green_color;
+        position: absolute;
+        top: 14px;
+        right: 10px;
+    }
+    input {
+        border-color: $green_color;
+        &:focus {
+            box-shadow: 0 0 0 3px $focus_green;
+        }
+    }
+}
+.hide {
+        display: none;
+    }

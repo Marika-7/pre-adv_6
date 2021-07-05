@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Test 6</title>
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+
+	<div class="block block_signup">
+		<h2 class="block__h2">Pleace sign up</h2>
+		<form class="block__form" name="form1">
+			<label for="" class="block__label">
+				<span class="block__placeholder">First name</span>
+				<input type="text" class="block__input" name="fname" autofocus autocomplete="off">
+			</label>
+			<label for="" class="block__label">
+				<span class="block__placeholder">Last name</span>
+				<input type="text" class="block__input" name="lname" autocomplete="off">
+			</label>
+			<label for="" class="block__label">
+				<span class="block__placeholder">Email address</span>
+				<input type="email" class="block__input" name="email" autocomplete="off">
+				<p id="modal_exist" class="block__modal hide">This email already exist</p>
+			</label>
+			<label for="" class="block__label">
+				<span class="block__placeholder">Password</span>
+				<input type="password" class="block__input" name="password">
+			</label>
+			<button type="button" class="block__button block__button_blue" name="signup">Sign Up</button>
+		</form>
+		<a href="#" id="toSignin" class="block__link">Sign in now</a>
+	</div>
+	<div class="block block_signin hide">
+		<h2 class="block__h2">Pleace sign in</h2>
+		<form class="block__form" name="form2">
+			<label for="" class="block__label">
+				<span class="block__placeholder">Email address</span>
+				<input type="email" class="block__input" name="email" autocomplete="off">
+			</label>
+			<label for="" class="block__label">
+				<span class="block__placeholder">Password</span>
+				<input type="password" class="block__input" name="password">
+				<p id="modal_empty" class="block__modal hide">localstorage is empty</p>
+				<p id="modal_incorrect" class="block__modal hide">Incorrect email or password</p> 
+			</label>
+			<button type="button" class="block__button block__button_green" name="signin">Sign In</button>
+		</form>
+		<a href="#" id="toSignup" class="block__link">Sign up now</a>
+	</div>
+
+	<div class="block block_profile hide">
+		<div class="block__user">
+			<img src="./images/man.png" id="userPhoto" class="block__photo" alt="User's avatar">
+			<h3 id="userName" class="block__h3">User</h3>
+			<p id="userEmail" class="block__p">user@email</p>
+			<p class="block__p">Position</p>
+			<hr class="block__hr">
+		</div>
+		<button type="button" id="btn_user" class="block__button block__button_green">Sign Up</button>
+	</div>
+
+	<script src="./main.js"></script>
+</body>
+</html>

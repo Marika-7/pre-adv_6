@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #F4F4F4;
+  color: #212529;
+  font-size: 14px;
+}
+
+.block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.block_signup {
+  width: 450px;
+  height: 470px;
+}
+
+.block_signin {
+  width: 450px;
+  height: 310px;
+}
+
+.block__h2 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 30px;
+}
+
+.block__form {
+  width: 100%;
+  height: 360px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.block__label {
+  position: relative;
+}
+
+.block__placeholder {
+  color: #6c757d;
+  position: absolute;
+  top: 16px;
+  left: 11px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.block__placeholder_write {
+  font-size: 13px;
+  top: 7px;
+}
+
+.block__input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #DCDCDC;
+  border-radius: 5px;
+  padding-left: 10px;
+  outline: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.block__input_write {
+  padding-top: 20px;
+}
+
+.block__input:focus {
+  border-color: rgba(38, 143, 255, 0.3);
+  -webkit-box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.3);
+          box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.3);
+}
+
+.block__modal {
+  background: #DD4C4F;
+  color: #F4F4F4;
+  font-size: 13px;
+  padding: 5px 6px;
+  border-radius: 4px;
+  position: absolute;
+  top: 51px;
+  left: 0;
+}
+
+.block__button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  color: #F4F4F4;
+  cursor: pointer;
+}
+
+.block__button_blue {
+  background-color: #007bff;
+}
+
+.block__button_blue:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.3);
+          box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.3);
+}
+
+.block__button_green {
+  background-color: #28a745;
+}
+
+.block__button_green:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(72, 180, 97, 0.4);
+          box-shadow: 0 0 0 3px rgba(72, 180, 97, 0.4);
+}
+
+.block__link {
+  width: 81px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.block__link:hover {
+  text-decoration: underline;
+}
+
+.block_profile {
+  width: 400px;
+  height: 400px;
+  background: #fff;
+  padding: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block__user {
+  width: 100%;
+  height: 70%;
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block__photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.block__h3 {
+  font-size: 24px;
+  margin: 10px;
+}
+
+.block__p {
+  color: #6c757d;
+}
+
+.block__hr {
+  width: 60px;
+}
+
+.invalid::after {
+  content: '\2716';
+  color: #DD4C4F;
+  position: absolute;
+  top: 14px;
+  right: 10px;
+}
+
+.invalid input {
+  border-color: #DD4C4F;
+}
+
+.invalid input:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(225, 83, 97, 0.4);
+          box-shadow: 0 0 0 3px rgba(225, 83, 97, 0.4);
+}
+
+.valid::after {
+  content: '\2714';
+  color: #28a745;
+  position: absolute;
+  top: 14px;
+  right: 10px;
+}
+
+.valid input {
+  border-color: #28a745;
+}
+
+.valid input:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(72, 180, 97, 0.4);
+          box-shadow: 0 0 0 3px rgba(72, 180, 97, 0.4);
+}
+
+.hide {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */
